@@ -1,8 +1,16 @@
 # Voliber
 
-Voliber is a focused revenue recovery website for small businesses with unpaid invoices, stale estimates, missed calls, and dormant follow-up queues.
+Voliber is a focused revenue follow-up operations website for small businesses with unpaid invoices, stale proposals, failed payments, and dormant leads already in motion.
 
 The site is built with Next.js App Router, TypeScript, and Tailwind CSS. It is ready for deployment on Vercel.
+
+## Operating Assets
+
+- [Business model](docs/business-model.md)
+- [Pipeline review template](docs/pipeline-review-template.md)
+- [Operating model](docs/operating-model.md)
+- [Outreach sequence](docs/outreach-sequence.md)
+- [Risk rules](docs/risk-rules.md)
 
 ## Getting Started
 
@@ -33,9 +41,3 @@ npm run build
 ## Deployment
 
 The project uses standard Next.js defaults and deploys cleanly on Vercel.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

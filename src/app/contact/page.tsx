@@ -4,15 +4,15 @@ import { Container, PageIntro, Section, SectionHeader } from "@/components/site-
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Tell Voliber about the follow-up problem costing your business the most right now.",
+    "Request a Voliber pipeline review for open invoices, proposals, failed payments, and dormant leads.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Contact" title="Tell us where follow-up is breaking down.">
+      <PageIntro eyebrow="Request a Pipeline Review" title="Show us the open revenue queue.">
         <p>
-          Share the system you use, the queue that is aging, and what you want under control. Voliber will look for the simplest way to start.
+          Share the systems you use, the items that are aging, and the decisions you want back under control. Voliber will look for the simplest review path.
         </p>
       </PageIntro>
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <SectionHeader eyebrow="Inquiry" title="A short operating intake." />
+              <SectionHeader eyebrow="Pipeline review" title="A short operating intake." />
               <p className="mt-6 max-w-md leading-7 text-muted">
                 For direct email, use{" "}
                 <a href="mailto:hello@voliber.com" className="font-medium text-foreground underline decoration-line underline-offset-4">
@@ -30,7 +30,7 @@ export default function ContactPage() {
               </p>
             </div>
             <form
-              action="mailto:hello@voliber.com?subject=Voliber%20Inquiry"
+              action="mailto:hello@voliber.com?subject=Pipeline%20Review%20Request"
               method="post"
               encType="text/plain"
               className="border border-line bg-background p-5 sm:p-8"
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   name="follow_up_problem"
                   rows={7}
                   className="mt-3 w-full border border-line bg-surface px-4 py-3 text-base leading-7 outline-none transition-colors placeholder:text-muted/70 focus:border-accent"
-                  placeholder="Overdue invoices, stale estimates, missed calls, dormant leads, or another queue."
+                  placeholder="Open invoices, stale proposals, failed payments, dormant leads, or another queue."
                 />
               </label>
               <p className="mt-5 text-sm leading-6 text-muted">

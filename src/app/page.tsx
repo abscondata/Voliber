@@ -8,36 +8,36 @@ import {
 } from "@/components/site-chrome";
 
 const proofPoints = [
-  "Work done inside your existing tools",
-  "Every touch documented",
-  "Fixed weekly cadence",
-  "Sensitive escalations held for approval",
+  "Classification before action",
+  "Client-approved follow-up",
+  "Exceptions held for review",
+  "Weekly movement reporting",
 ];
 
 const handled = [
   {
-    title: "Unpaid invoice follow-up",
-    text: "Polite, persistent reminders for open balances before they become old problems.",
+    title: "Open invoice queues",
+    text: "Unpaid invoices are grouped by age, clarity, value, and relationship risk before follow-up begins.",
   },
   {
-    title: "Stale estimate follow-up",
-    text: "Clear check-ins on quotes that were sent, discussed, then allowed to sit.",
+    title: "Stale estimate and proposal queues",
+    text: "Old estimates and proposals get a fixed review rhythm instead of sitting without a next action.",
   },
   {
-    title: "Missed-call and dormant lead follow-up",
-    text: "Callbacks and reactivation touches for people who already showed intent.",
+    title: "Dormant lead and failed payment queues",
+    text: "Quiet leads and failed payments are worked through approved timing, channels, and escalation rules.",
   },
   {
-    title: "Weekly revenue recovery summary",
-    text: "A concise report showing what moved, what stalled, and what needs your decision.",
+    title: "Weekly movement report",
+    text: "A concise report shows what was worked, what moved, and which items need a decision.",
   },
 ];
 
 const previewSteps = [
-  "You provide access or exports",
-  "Voliber runs follow-up on a set schedule",
-  "Every action is documented",
-  "You get a weekly summary and keep control",
+  "Source data is reviewed",
+  "Revenue objects are classified",
+  "A/B/C priorities are set",
+  "Approved follow-up is logged",
 ];
 
 export default function Home() {
@@ -47,16 +47,19 @@ export default function Home() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div className="max-w-4xl">
-              <Eyebrow>Voliber revenue recovery</Eyebrow>
+              <Eyebrow>Revenue follow-up operations</Eyebrow>
               <h1 className="text-5xl font-semibold tracking-tight text-foreground sm:text-7xl">
-                Unpaid invoices. Stale estimates. Missed revenue.
+                Revenue follow-up operations for open money already in motion.
               </h1>
               <p className="mt-8 max-w-2xl text-xl leading-9 text-muted">
-                Voliber runs the follow-up process for small businesses so money already in your pipeline does not sit untouched.
+                Voliber helps small businesses work the unpaid invoices, stale estimates, dormant leads, and failed payments already sitting inside their systems.
+              </p>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
+                A controlled weekly process for classification, approved follow-up, exception handling, and movement reporting.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <PrimaryLink href="/contact">Tell Us About Your Business</PrimaryLink>
-                <SecondaryLink href="/how-it-works">See How It Works</SecondaryLink>
+                <PrimaryLink href="/contact">Request a Pipeline Review</PrimaryLink>
+                <SecondaryLink href="/how-it-works">See Operating Model</SecondaryLink>
               </div>
             </div>
             <RecoveryLedger />
@@ -78,7 +81,7 @@ export default function Home() {
 
       <Section>
         <Container>
-          <SectionHeader eyebrow="What Voliber handles" title="Focused follow-up for money already near the business." />
+          <SectionHeader eyebrow="What Voliber handles" title="Open revenue queues that need ownership." />
           <div className="mt-12 grid gap-px bg-line md:grid-cols-2">
             {handled.map((item) => (
               <article key={item.title} className="bg-background p-6 sm:p-8">
@@ -96,10 +99,10 @@ export default function Home() {
             <SectionHeader eyebrow="Why this matters" title="Revenue leakage compounds quietly." />
             <div className="space-y-6 text-lg leading-8 text-muted">
               <p>
-                Work gets done, the invoice goes out, and follow-up drifts. Estimates wait in inboxes. Missed calls get logged once. No one owns the rhythm, so the owner ends up chasing old balances after hours.
+                Work gets done, the invoice goes out, and follow-up drifts. Proposals wait in inboxes. Failed payments get noted once. No one owns the queue, so open money ages without a clear next action.
               </p>
               <p>
-                Voliber gives the process an operator, a schedule, and a paper trail. The work is calm, documented, and controlled by the business.
+                Voliber gives the queue a weekly owner, approval rules, and a record of movement. The work is calm, documented, and controlled by the business.
               </p>
             </div>
           </div>
@@ -109,7 +112,7 @@ export default function Home() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <SectionHeader eyebrow="How it works" title="A fixed rhythm, not another loose task list." />
+            <SectionHeader eyebrow="Operating loop" title="A weekly rhythm for classifying and moving open revenue." />
             <ol className="grid gap-px bg-line sm:grid-cols-2">
               {previewSteps.map((step, index) => (
                 <li key={step} className="bg-background p-6 sm:p-8">
@@ -125,13 +128,13 @@ export default function Home() {
       <Section className="bg-surface">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end">
-            <SectionHeader eyebrow="Who it is for" title="Built for small businesses where follow-up matters but no one owns it consistently.">
+            <SectionHeader eyebrow="First focus" title="Built for B2B service firms and agencies with invoice and proposal queues.">
               <p>
-                Voliber fits contractors, agencies, consultants, B2B service firms, and clinics with self-pay balances.
+                Voliber fits marketing agencies, web design firms, IT service providers, consultants, and small professional service firms.
               </p>
             </SectionHeader>
             <div className="border-l border-line pl-6 text-lg leading-8 text-muted">
-              It is for businesses with real records, real open items, and a clear need for disciplined follow-up without aggressive tactics.
+              It is for firms with real records, open items, and a clear need for disciplined follow-up without aggressive tactics.
             </div>
           </div>
         </Container>
@@ -141,10 +144,10 @@ export default function Home() {
         <Container>
           <div className="max-w-3xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-              If revenue is sitting in overdue invoices, stale estimates, or untouched follow-up queues, let us take a look.
+              If unpaid invoices, old proposals, failed payments, or dormant leads are aging without an owner, request a pipeline review.
             </h2>
             <div className="mt-10">
-              <PrimaryLink href="/contact">Tell Us About Your Business</PrimaryLink>
+              <PrimaryLink href="/contact">Request a Pipeline Review</PrimaryLink>
             </div>
           </div>
         </Container>
@@ -155,10 +158,10 @@ export default function Home() {
 
 function RecoveryLedger() {
   const rows = [
-    ["Open invoices", "Aged", "Touch logged", "In motion"],
-    ["Sent estimates", "Stale", "Reply requested", "Review"],
-    ["Missed calls", "Recent", "Callback logged", "Queued"],
-    ["Dormant leads", "Older", "Recheck scheduled", "Monitor"],
+    ["Late invoice", "A priority", "Approved touch", "Logged"],
+    ["Stale proposal", "B priority", "Reply requested", "Open"],
+    ["Failed payment", "A priority", "Approval needed", "Held"],
+    ["Dormant lead", "C priority", "Recheck scheduled", "Monitor"],
   ];
 
   return (
@@ -166,7 +169,7 @@ function RecoveryLedger() {
       <div className="flex items-start justify-between gap-6 border-b border-line pb-5">
         <div>
           <p className="text-sm font-semibold">Weekly recovery docket</p>
-          <p className="mt-1 text-sm text-muted">Documented follow-up queue</p>
+          <p className="mt-1 text-sm text-muted">Documented operating queue</p>
         </div>
         <span className="border border-accent-soft bg-accent-soft px-3 py-1 text-xs font-semibold text-accent">
           Active

@@ -10,38 +10,38 @@ import {
 export const metadata: Metadata = {
   title: "Who It's For",
   description:
-    "Voliber is built for small businesses with recurring invoicing, quoting, slow follow-up, and owner-led admin pressure.",
+    "Voliber is built for B2B service firms and agencies with invoices, proposals, and dormant leads that need ownership.",
 };
 
 const goodFits = [
   {
-    title: "Contractors and trades",
-    text: "Open balances, sent estimates, and missed calls that need steady follow-up without changing field operations.",
+    title: "Marketing agencies",
+    text: "Retainer invoices, project invoices, old proposals, and dormant prospects that need a weekly owner.",
   },
   {
-    title: "Agencies and studios",
-    text: "Project invoices, proposal follow-up, and old opportunities that drift when delivery work gets busy.",
+    title: "Web design firms",
+    text: "Proposal and payment follow-up that can stall while the team is focused on active delivery work.",
   },
   {
-    title: "Consultants and professional firms",
-    text: "Relationship-sensitive follow-up where tone, documentation, and approval rules matter.",
+    title: "IT service providers",
+    text: "Open invoices, failed payments, and service follow-up where records exist but next actions drift.",
   },
   {
-    title: "B2B service firms",
-    text: "Recurring invoice and quote workflows where no one owns the weekly revenue recovery queue.",
+    title: "Consulting firms",
+    text: "Relationship-sensitive invoice and proposal follow-up where tone and approval rules matter.",
   },
   {
-    title: "Clinics with self-pay balances",
-    text: "Patient balance follow-up that needs discipline, documentation, and clear escalation boundaries.",
+    title: "Small professional service firms",
+    text: "Email-native revenue queues that need classification, priority, logging, and a weekly report.",
   },
 ];
 
 const fitSignals = [
-  "The open invoice list grows between admin days",
-  "Quotes are sent but not revisited on schedule",
-  "Missed calls are logged once and then buried",
-  "The owner knows follow-up matters but has no fixed time for it",
-  "The team is focused on delivery and current work",
+  "The open invoice list grows between finance reviews",
+  "Proposals are sent but not revisited on schedule",
+  "Dormant leads sit in the CRM or inbox without a next action",
+  "Failed payments are noted but not worked through a defined queue",
+  "The principal knows follow-up matters but has no fixed weekly owner",
   "Tone and relationship context matter",
 ];
 
@@ -56,15 +56,15 @@ const poorFits = [
 export default function WhoItsForPage() {
   return (
     <>
-      <PageIntro eyebrow="Who it's for" title="For businesses where money is close, but follow-up keeps slipping.">
+      <PageIntro eyebrow="Who it's for" title="For B2B service firms and agencies with open revenue no one consistently owns.">
         <p>
-          Voliber is built for small businesses with recurring invoicing, steady quoting, or follow-up queues that matter financially but do not have a consistent owner.
+          Voliber is built for firms with invoices, proposals, failed payments, and dormant leads already sitting inside their systems.
         </p>
       </PageIntro>
 
       <Section className="bg-surface">
         <Container>
-          <SectionHeader eyebrow="Good fit" title="Small firms with real records and real follow-up pressure." />
+          <SectionHeader eyebrow="Primary fit" title="Agencies and service firms with clean workflows and aging next actions." />
           <div className="mt-12 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
             {goodFits.map((fit) => (
               <article key={fit.title} className="bg-surface p-6 sm:p-8">
@@ -79,7 +79,7 @@ export default function WhoItsForPage() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader eyebrow="Fit signals" title="The problem usually looks operational before it looks financial." />
+            <SectionHeader eyebrow="Fit signals" title="The problem usually looks like an unmanaged queue." />
             <ul className="divide-y divide-line border-y border-line">
               {fitSignals.map((signal) => (
                 <li key={signal} className="py-5 text-lg font-medium leading-7">
@@ -114,10 +114,10 @@ export default function WhoItsForPage() {
         <Container>
           <div className="max-w-3xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-              If your records are usable and the follow-up queue keeps aging, Voliber may be the right operator.
+              If invoices, proposals, failed payments, or dormant leads keep aging without an owner, request a pipeline review.
             </h2>
             <div className="mt-10">
-              <PrimaryLink href="/contact">Tell Us About Your Business</PrimaryLink>
+              <PrimaryLink href="/contact">Request a Pipeline Review</PrimaryLink>
             </div>
           </div>
         </Container>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 const navLinks = [
-  { href: "/how-it-works", label: "How It Works" },
+  { href: "/how-it-works", label: "Operating Model" },
   { href: "/who-its-for", label: "Who It's For" },
   { href: "/contact", label: "Contact" },
 ];
@@ -24,7 +24,7 @@ export function SiteHeader() {
             href="/contact"
             className="border border-accent bg-accent px-4 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-foreground lg:hidden"
           >
-            Talk to Us
+            Request a Pipeline Review
           </Link>
         </div>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-muted">
@@ -37,7 +37,7 @@ export function SiteHeader() {
             href="/contact"
             className="hidden border border-accent bg-accent px-4 py-2 text-accent-ink transition-colors hover:bg-foreground lg:inline-flex"
           >
-            Talk to Us
+            Request a Pipeline Review
           </Link>
         </nav>
       </div>
@@ -57,7 +57,7 @@ export function SiteFooter() {
             <span className="text-lg font-semibold tracking-[0.12em]">VOLIBER</span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-6 text-muted">
-            Revenue recovery follow-up for small businesses with open money already in motion.
+            Revenue follow-up operations for open money already in motion.
           </p>
         </div>
         <div className="grid gap-8 text-sm sm:grid-cols-3">
@@ -74,9 +74,9 @@ export function SiteFooter() {
           <div>
             <p className="font-semibold text-foreground">Focus</p>
             <div className="mt-4 flex flex-col gap-3 text-muted">
-              <span>Overdue invoices</span>
-              <span>Stale estimates</span>
-              <span>Dormant follow-up</span>
+              <span>Open revenue queues</span>
+              <span>Approved follow-up</span>
+              <span>Movement reporting</span>
             </div>
           </div>
           <div>
