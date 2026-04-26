@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 const navLinks = [
   { href: "/how-it-works", label: "Method" },
   { href: "/who-its-for", label: "Who It's For" },
+  { href: "/notes", label: "Notes" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -12,10 +13,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-line/80 bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
         <div className="flex items-center justify-between gap-5">
-          <Link href="/" className="group flex items-center gap-3" aria-label="Voliber home">
-            <span className="flex size-8 items-center justify-center border border-foreground bg-foreground text-[11px] font-semibold tracking-[0.18em] text-background transition-colors group-hover:bg-accent">
-              V
-            </span>
+          <Link href="/" className="group flex items-center" aria-label="Voliber home">
             <span className="text-lg font-semibold tracking-[0.12em] text-foreground">
               VOLIBER
             </span>
@@ -50,10 +48,7 @@ export function SiteFooter() {
     <footer className="border-t border-line bg-surface">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:px-8 lg:grid-cols-[1fr_1.4fr] lg:px-10">
         <div>
-          <div className="flex items-center gap-3">
-            <span className="flex size-8 items-center justify-center border border-foreground bg-foreground text-[11px] font-semibold tracking-[0.18em] text-background">
-              V
-            </span>
+          <div className="flex items-center">
             <span className="text-lg font-semibold tracking-[0.12em]">VOLIBER</span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-6 text-muted">
@@ -86,7 +81,7 @@ export function SiteFooter() {
               <a href="mailto:hello@voliber.com" className="hover:text-foreground">
                 hello@voliber.com
               </a>
-              <span>Devine company</span>
+              <span>A Devine operating company</span>
             </div>
           </div>
         </div>

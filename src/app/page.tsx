@@ -30,6 +30,14 @@ const methodLines = [
   "Record the state change.",
 ];
 
+const reviewItems = [
+  "Source records reviewed",
+  "Open value mapped",
+  "Priority items identified",
+  "Held items separated",
+  "45-day operating recommendation",
+];
+
 export default function Home() {
   return (
     <>
@@ -108,6 +116,30 @@ export default function Home() {
       </Section>
 
       <Section className="bg-surface">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <SectionHeader title="What the review includes">
+              <p>
+                The review starts from existing records. No system migration is required.
+              </p>
+            </SectionHeader>
+            <div>
+              <ul className="divide-y divide-line border-y border-line">
+                {reviewItems.map((item) => (
+                  <li key={item} className="py-4 text-lg font-medium leading-7">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <SecondaryLink href="/sample-review">View sample format</SecondaryLink>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <Section>
         <Container>
           <div className="max-w-3xl">
             <SectionHeader title="Built for firms with unresolved commercial value.">

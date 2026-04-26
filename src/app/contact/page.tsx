@@ -11,7 +11,7 @@ export default function ContactPage() {
     <>
       <PageIntro eyebrow="Contact" title="Request Review">
         <p>
-          Send the systems and unresolved items that need review. The form opens an email draft to hello@voliber.com.
+          Send the systems and unresolved items that need review. Voliber will respond with next steps for a Pipeline Review. The form opens an email draft to hello@voliber.com.
         </p>
       </PageIntro>
 

@@ -36,6 +36,34 @@ const poorFits = [
   "Enterprise procurement programs",
 ];
 
+const questions = [
+  {
+    question: "Is this collections?",
+    answer:
+      "No. Voliber does not make legal threats, pressure customers, or act as a collection agency. The work is limited to approved business follow-up and operating review.",
+  },
+  {
+    question: "What data do you need?",
+    answer:
+      "Usually invoice reports, A/R aging, proposal lists, failed payment records, CRM exports, or inbox records.",
+  },
+  {
+    question: "Do you contact customers directly?",
+    answer:
+      "Only if the client approves the object type, channel, tone, and limits. Sensitive items are held.",
+  },
+  {
+    question: "What happens with disputes?",
+    answer:
+      "Disputes, chargebacks, legal threats, unusual terms, and sensitive accounts are routed back to the client.",
+  },
+  {
+    question: "Who operates Voliber?",
+    answer:
+      "Voliber is operated by Robin Howley through Devine. The business uses documented review, approval, and reporting processes.",
+  },
+];
+
 export default function WhoItsForPage() {
   return (
     <>
@@ -86,6 +114,22 @@ export default function WhoItsForPage() {
                 <div key={item} className="bg-surface p-6 text-lg font-medium leading-7 text-muted">
                   {item}
                 </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+            <SectionHeader title="Questions before a review" />
+            <div className="divide-y divide-line border-y border-line">
+              {questions.map((item) => (
+                <article key={item.question} className="py-6">
+                  <h2 className="text-lg font-semibold tracking-tight">{item.question}</h2>
+                  <p className="mt-3 leading-7 text-muted">{item.answer}</p>
+                </article>
               ))}
             </div>
           </div>
