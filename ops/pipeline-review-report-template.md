@@ -1,5 +1,7 @@
 # Revenue Pipeline Review Report
 
+> Preferred version: use [Pipeline Review report v2](pipeline-review-report-v2.md) for new client-facing reports. This file is retained as the original template.
+
 ## Executive Summary
 
 - Overall pipeline condition:
