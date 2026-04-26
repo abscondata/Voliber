@@ -4,15 +4,15 @@ import { Container, PageIntro, Section, SectionHeader } from "@/components/site-
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request a Voliber Pipeline Review for open revenue queues inside B2B service firms.",
+    "Request a Voliber Pipeline Review.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Request a Pipeline Review" title="Review the open revenue queue.">
+      <PageIntro eyebrow="Request a Pipeline Review" title="Request a Pipeline Review.">
         <p>
-          Share the source systems, revenue objects, aging items, and approval rules that need operating control. Voliber will confirm the simplest review path.
+          Share the systems, aging items, and approval rules that need review. This form opens an email draft.
         </p>
       </PageIntro>
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <SectionHeader eyebrow="Pipeline review" title="A short operating intake." />
+              <SectionHeader eyebrow="Pipeline review" title="A short intake." />
               <p className="mt-6 max-w-md leading-7 text-muted">
                 For direct email, use{" "}
                 <a href="mailto:hello@voliber.com" className="font-medium text-foreground underline decoration-line underline-offset-4">

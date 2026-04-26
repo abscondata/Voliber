@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const goodFits = [
   {
     title: "Marketing agencies",
-    text: "Retainer invoices, project invoices, stale proposals, and quiet opportunities that need a weekly owner.",
+    text: "Retainer invoices, project invoices, stale proposals, and quiet opportunities without a weekly owner.",
   },
   {
     title: "Web design firms",
@@ -32,7 +32,7 @@ const goodFits = [
   },
   {
     title: "Small professional service firms",
-    text: "Source-system records that need classification, priority, logging, and a weekly movement report.",
+    text: "Invoice and proposal queues that need priority, logging, and a weekly report.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function WhoItsForPage() {
         <Container>
           <SectionHeader title="Primary fit">
             <p>
-              Voliber is for service firms with existing source systems, meaningful open revenue objects, and a need for controlled weekly movement.
+              Voliber is for service firms with existing records, meaningful open revenue, and a need for weekly control.
             </p>
           </SectionHeader>
           <div className="mt-12 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
@@ -86,7 +86,7 @@ export default function WhoItsForPage() {
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <SectionHeader title="Fit signals">
               <p>
-                The problem usually looks like an open revenue queue with no consistent owner, priority order, or operating ledger.
+                The problem usually looks like invoice, proposal, and opportunity queues with no consistent owner.
               </p>
             </SectionHeader>
             <ul className="divide-y divide-line border-y border-line">

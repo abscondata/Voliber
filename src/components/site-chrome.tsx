@@ -57,7 +57,7 @@ export function SiteFooter() {
             <span className="text-lg font-semibold tracking-[0.12em]">VOLIBER</span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-6 text-muted">
-            Working-capital discipline for open revenue queues.
+            Working-capital control for open receivables and stalled proposals.
           </p>
         </div>
         <div className="grid gap-8 text-sm sm:grid-cols-3">
@@ -74,10 +74,10 @@ export function SiteFooter() {
           <div>
             <p className="font-semibold text-foreground">Focus</p>
             <div className="mt-4 flex flex-col gap-3 text-muted">
-              <span>Working capital</span>
-              <span>Approval rules</span>
-              <span>Exception control</span>
-              <span>Movement reporting</span>
+              <span>Receivables</span>
+              <span>Stalled proposals</span>
+              <span>Approved follow-up</span>
+              <span>Weekly reporting</span>
             </div>
           </div>
           <div>

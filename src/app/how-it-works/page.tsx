@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Operating Model",
   description:
-    "Voliber applies working-capital discipline to open revenue queues inside B2B service firms.",
+    "How Voliber works receivables, proposals, failed payments, and dormant opportunities through a controlled weekly process.",
 };
 
 const sourceSystems = [
@@ -35,11 +35,10 @@ const classifications = [
 
 const priorityInputs = [
   ["Value", "Amount at stake and commercial relevance."],
-  ["Aging", "Time since creation, due date, failure, or last touch."],
+  ["Age", "Time since creation, due date, failure, or last touch."],
   ["Clarity", "Quality of the source record and next action."],
-  ["Movement probability", "Likelihood that a controlled touch can advance the item."],
-  ["Relationship risk", "Sensitivity of the account, buyer, or context."],
-  ["Approval posture", "Whether action is cleared, held, or escalated."],
+  ["Risk", "Sensitivity of the account, buyer, or context."],
+  ["Approval", "Whether action is cleared, held, or escalated."],
 ];
 
 const reportItems = [
@@ -56,22 +55,22 @@ const reportItems = [
 export default function HowItWorksPage() {
   return (
     <>
-      <PageIntro eyebrow="Working-capital discipline" title="Operating Model">
+      <PageIntro eyebrow="Operating Model" title="How the work is controlled.">
         <p>
-          Small B2B service firms often have revenue objects sitting across accounting, sales, inboxes, CRMs, and owner memory. Voliber identifies, normalizes, classifies, prioritizes, works, logs, escalates, and reports those objects through a controlled weekly process.
+          Voliber works from the systems already inside the business. The process is weekly, documented, and governed by approval rules.
         </p>
       </PageIntro>
 
       <Section className="bg-surface">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <SectionHeader title="Revenue objects" />
+            <SectionHeader title="Revenue items" />
             <div className="space-y-6 text-lg leading-8 text-muted">
               <p>
-                A revenue object is an open invoice, stale proposal, failed payment, dormant opportunity, dispute, or approval-required item that still needs an operating decision.
+                The queue begins with open invoices, stale proposals, failed payments, dormant opportunities, disputes, and items that need approval.
               </p>
               <p>
-                Voliber treats those objects as a queue, not a loose collection of reminders. Each object needs a type, source, age, status, priority, approval posture, next action, and record of movement.
+                Each item needs a source, age, status, priority, approval posture, and next action before work begins.
               </p>
             </div>
           </div>
@@ -83,7 +82,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <SectionHeader title="Source systems">
               <p>
-                The operating ledger starts with the systems already in use. The first task is to locate the open objects and confirm which records are reliable enough to work.
+                The first task is to locate the records and confirm which are reliable enough to work.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
@@ -102,7 +101,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <SectionHeader title="Classification">
               <p>
-                Classification keeps the queue controlled. Different object types need different timing, tone, source checks, and approval rules.
+                Different item types need different timing, tone, source checks, and approval rules.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
@@ -121,7 +120,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
             <SectionHeader title="Priority">
               <p>
-                The queue is ranked before work begins. Priority is based on operating judgment, not fake precision.
+                The queue is ranked before work begins. Priority is based on practical operating judgment.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line md:grid-cols-3">
@@ -145,7 +144,7 @@ export default function HowItWorksPage() {
                 Work only begins inside agreed rules: timing, tone, contact channel, touch frequency, and stop conditions. Voliber can send or prepare follow-up only where the client has approved the object type and action.
               </p>
               <p>
-                The point is controlled movement. The business keeps authority over relationship-sensitive items, exceptions, and decisions that change commercial terms.
+                The business keeps authority over relationship-sensitive items, exceptions, and decisions that change commercial terms.
               </p>
             </div>
           </div>
@@ -171,9 +170,9 @@ export default function HowItWorksPage() {
       <Section className="bg-surface">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader title="Movement reporting">
+            <SectionHeader title="Weekly reporting">
               <p>
-                The weekly report is the operating record: what was worked, what moved, what aged, what was held, and what decisions are needed next.
+                The weekly report shows what was worked, what changed, what aged, what was held, and what decisions are needed next.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
