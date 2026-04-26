@@ -1,11 +1,19 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-const navLinks = [
-  { href: "/how-it-works", headerLabel: "method", footerLabel: "method" },
-  { href: "/notes", headerLabel: "notes", footerLabel: "notes" },
-  { href: "/who-its-for", headerLabel: "who it's for", footerLabel: "who it's for" },
-  { href: "/contact", headerLabel: "contact", footerLabel: "contact" },
+const headerLinks = [
+  { href: "/how-it-works", label: "method" },
+  { href: "/notes", label: "notes" },
+  { href: "/sample-review", label: "sample" },
+  { href: "/contact", label: "contact" },
+];
+
+const footerLinks = [
+  { href: "/how-it-works", label: "method" },
+  { href: "/notes", label: "notes" },
+  { href: "/sample-review", label: "sample" },
+  { href: "/who-its-for", label: "who it's for" },
+  { href: "/contact", label: "contact" },
 ];
 
 export function SiteHeader() {
@@ -20,9 +28,9 @@ export function SiteHeader() {
           VOLIBER
         </Link>
         <nav className="flex flex-wrap items-baseline gap-x-8 gap-y-2 font-mono text-[12px] lowercase leading-none text-muted">
-          {navLinks.map((link) => (
+          {headerLinks.map((link) => (
             <Link key={link.href} href={link.href}>
-              {link.headerLabel}
+              {link.label}
             </Link>
           ))}
         </nav>
@@ -44,9 +52,9 @@ export function SiteFooter() {
           </p>
         </div>
         <nav className="flex flex-col items-start gap-2">
-          {navLinks.map((link) => (
+          {footerLinks.map((link) => (
             <Link key={link.href} href={link.href} className="lowercase">
-              {link.footerLabel}
+              {link.label}
             </Link>
           ))}
         </nav>
