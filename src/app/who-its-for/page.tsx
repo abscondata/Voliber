@@ -15,12 +15,12 @@ const questions = [
   {
     question: "Who handles customer contact?",
     answer:
-      "Contact occurs from client-owned channels under approved limits. Voliber does not assume the client's identity, assign debts, or operate as a third-party collector.",
+      "Contact occurs from client-owned channels under approved limits. Voliber does not assume the client's identity, assign debts, or operate as a third-party recovery firm.",
   },
   {
     question: "What is the legal posture?",
     answer:
-      "Voliber operates as a service provider on client-owned accounts. The work falls outside the FDCPA's primary scope, which addresses consumer debt, and below state licensing thresholds for third-party collection. Scope is documented at engagement.",
+      "Voliber operates as a service provider on client-owned accounts. The work falls outside the FDCPA's primary scope, which addresses consumer debt, and below state licensing thresholds for third-party recovery activity. Scope is documented at engagement.",
   },
   {
     question: "How is data handled?",
@@ -58,7 +58,7 @@ export default function WhoItsForPage() {
         </p>
         <p>
           Voliber does not work with consumer debt portfolios, regulated medical
-          collections, legal enforcement, dispute-heavy contractor work, or
+          receivables, legal enforcement, dispute-heavy contractor work, or
           engagements that require pressure-based contact.
         </p>
       </div>

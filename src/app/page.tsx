@@ -13,7 +13,7 @@ export default function Home() {
         Receivables, proposals, payment failures, dormant opportunities.
       </p>
       <p className="mt-10 font-mono text-[13px] leading-[1.7] text-muted">
-        Method, notes, and sample review available above.
+        Approach and sample format available above.
       </p>
     </PageShell>
   );

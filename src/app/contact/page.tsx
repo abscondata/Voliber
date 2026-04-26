@@ -25,9 +25,12 @@ export default function ContactPage() {
       </h1>
 
       <p className="mt-12 max-w-[62ch] text-[19px] leading-[1.55]">
-        Pipeline reviews are scheduled directly. To request one, send a brief
-        note describing your business, approximate annual revenue, and the
-        records you have available.
+        For review requests, send the systems and unresolved items that need
+        review.
+      </p>
+
+      <p className="mt-6 font-mono text-[13px] leading-6 text-muted">
+        <a href="mailto:hello@voliber.com">hello@voliber.com</a>
       </p>
 
       <form

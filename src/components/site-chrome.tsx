@@ -2,15 +2,12 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 const headerLinks = [
-  { href: "/how-it-works", label: "method" },
-  { href: "/notes", label: "notes" },
-  { href: "/sample-review", label: "sample" },
+  { href: "/how-it-works", label: "approach" },
   { href: "/contact", label: "contact" },
 ];
 
 const footerLinks = [
-  { href: "/how-it-works", label: "method" },
-  { href: "/notes", label: "notes" },
+  { href: "/how-it-works", label: "approach" },
   { href: "/sample-review", label: "sample" },
   { href: "/who-its-for", label: "who it's for" },
   { href: "/contact", label: "contact" },

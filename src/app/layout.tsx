@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     default: "Voliber | Revenue Decay Operations",
     template: "%s | Voliber",
   },
-  description: "Research-driven operations for revenue decay.",
+  description: "Operations on the decay layer of B2B service revenue.",
   openGraph: {
     title: "Voliber | Revenue Decay Operations",
-    description: "Research-driven operations for revenue decay.",
+    description: "Operations on the decay layer of B2B service revenue.",
     url: "https://voliber.com",
     siteName: "Voliber",
     locale: "en_US",
