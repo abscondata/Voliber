@@ -16,15 +16,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://voliber.com"),
   title: {
-    default: "Voliber | Revenue Follow-Up Operations",
+    default: "Voliber | Working-Capital Discipline",
     template: "%s | Voliber",
   },
   description:
-    "Voliber runs revenue follow-up operations for open money already in motion.",
+    "Working-capital discipline for open revenue queues inside B2B service firms.",
   openGraph: {
-    title: "Voliber | Revenue Follow-Up Operations",
+    title: "Voliber | Working-Capital Discipline",
     description:
-      "Disciplined revenue follow-up operations for small businesses with open money already in motion.",
+      "Voliber identifies, classifies, prioritizes, works, logs, escalates, and reports open revenue queues.",
     url: "https://voliber.com",
     siteName: "Voliber",
     locale: "en_US",

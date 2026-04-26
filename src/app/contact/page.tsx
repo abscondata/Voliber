@@ -4,15 +4,15 @@ import { Container, PageIntro, Section, SectionHeader } from "@/components/site-
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request a Voliber pipeline review for open invoices, proposals, failed payments, and dormant leads.",
+    "Request a Voliber Pipeline Review for open revenue queues inside B2B service firms.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Request a Pipeline Review" title="Show us the open revenue queue.">
+      <PageIntro eyebrow="Request a Pipeline Review" title="Review the open revenue queue.">
         <p>
-          Share the systems you use, the items that are aging, and the decisions you want back under control. Voliber will look for the simplest review path.
+          Share the source systems, revenue objects, aging items, and approval rules that need operating control. Voliber will confirm the simplest review path.
         </p>
       </PageIntro>
 
@@ -46,13 +46,13 @@ export default function ContactPage() {
               </div>
               <label className="mt-6 block">
                 <span className="text-sm font-semibold text-foreground">
-                  What follow-up problem is costing you the most right now?
+                  Which open revenue queue needs review?
                 </span>
                 <textarea
                   name="follow_up_problem"
                   rows={7}
                   className="mt-3 w-full border border-line bg-surface px-4 py-3 text-base leading-7 outline-none transition-colors placeholder:text-muted/70 focus:border-accent"
-                  placeholder="Open invoices, stale proposals, failed payments, dormant leads, or another queue."
+                  placeholder="Open invoices, stale proposals, failed payments, dormant opportunities, or another queue."
                 />
               </label>
               <p className="mt-5 text-sm leading-6 text-muted">

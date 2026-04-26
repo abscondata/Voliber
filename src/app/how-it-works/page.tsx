@@ -10,53 +10,36 @@ import {
 export const metadata: Metadata = {
   title: "Operating Model",
   description:
-    "Voliber classifies, prioritizes, works, logs, escalates, and reports open revenue already in motion.",
+    "Voliber applies working-capital discipline to open revenue queues inside B2B service firms.",
 };
 
-const sourceData = [
-  "Open invoice reports",
+const sourceSystems = [
+  "Accounting systems",
+  "Invoice reports",
   "A/R aging",
-  "Estimate or proposal exports",
-  "Dormant lead lists",
-  "Failed payment records",
-  "Shared inbox or call-log records",
-  "Client tone, timing, and approval rules",
+  "Proposal or estimate exports",
+  "Payment processors",
+  "CRM records",
+  "Shared inboxes",
+  "Owner notes and call records",
 ];
 
 const classifications = [
-  "Clean invoice",
-  "Late invoice",
-  "Stale estimate",
-  "Dormant lead",
-  "Failed payment",
-  "Disputed or approval-required item",
+  "Receivable",
+  "Proposal",
+  "Payment failure",
+  "Dormant opportunity",
+  "Dispute",
+  "Approval-required item",
 ];
 
-const operatingSteps = [
-  {
-    title: "Source data",
-    text: "Voliber starts from the systems the business already uses, then turns scattered open items into a working queue.",
-  },
-  {
-    title: "Classification",
-    text: "Every open item is treated as a revenue object with a type, state, next action, and approval posture.",
-  },
-  {
-    title: "Priority",
-    text: "The queue is grouped by value, age, clarity, likelihood of movement, and relationship risk.",
-  },
-  {
-    title: "Approved follow-up",
-    text: "Follow-up runs through client-approved rules, templates, timing, and channels.",
-  },
-  {
-    title: "Logging and exceptions",
-    text: "Every touch is logged. Disputes, chargebacks, unusual requests, and sensitive accounts are held for review.",
-  },
-  {
-    title: "Weekly movement report",
-    text: "The business sees what was worked, what moved, what needs approval, and what is still aging.",
-  },
+const priorityInputs = [
+  ["Value", "Amount at stake and commercial relevance."],
+  ["Aging", "Time since creation, due date, failure, or last touch."],
+  ["Clarity", "Quality of the source record and next action."],
+  ["Movement probability", "Likelihood that a controlled touch can advance the item."],
+  ["Relationship risk", "Sensitivity of the account, buyer, or context."],
+  ["Approval posture", "Whether action is cleared, held, or escalated."],
 ];
 
 const reportItems = [
@@ -66,28 +49,29 @@ const reportItems = [
   "Payments or closures",
   "Approval-required exceptions",
   "Open items still aging",
+  "Client decisions needed",
   "Recommended next actions",
 ];
 
 export default function HowItWorksPage() {
   return (
     <>
-      <PageIntro eyebrow="Operating Model" title="A measured operating model for open revenue already in motion.">
+      <PageIntro eyebrow="Working-capital discipline" title="Operating Model">
         <p>
-          Voliber turns unmanaged revenue objects into a weekly operating queue. Each item is classified, prioritized, worked through approved follow-up, logged, escalated when needed, and reported back to the business.
+          Small B2B service firms often have revenue objects sitting across accounting, sales, inboxes, CRMs, and owner memory. Voliber identifies, normalizes, classifies, prioritizes, works, logs, escalates, and reports those objects through a controlled weekly process.
         </p>
       </PageIntro>
 
       <Section className="bg-surface">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <SectionHeader eyebrow="The operating problem" title="Open revenue leaks through unmanaged next actions." />
+            <SectionHeader title="Revenue objects" />
             <div className="space-y-6 text-lg leading-8 text-muted">
               <p>
-                Open revenue does not disappear all at once. It leaks through unpaid invoices, old estimates, dormant leads, failed payments, and missed follow-up.
+                A revenue object is an open invoice, stale proposal, failed payment, dormant opportunity, dispute, or approval-required item that still needs an operating decision.
               </p>
               <p>
-                The issue is usually not effort. It is the absence of a controlled queue, a priority order, and a weekly reporting rhythm.
+                Voliber treats those objects as a queue, not a loose collection of reminders. Each object needs a type, source, age, status, priority, approval posture, next action, and record of movement.
               </p>
             </div>
           </div>
@@ -97,13 +81,13 @@ export default function HowItWorksPage() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <SectionHeader eyebrow="Source data" title="Voliber starts from the systems already in use.">
+            <SectionHeader title="Source systems">
               <p>
-                The first pass is practical: identify the source records, confirm what can be worked, and define what requires approval.
+                The operating ledger starts with the systems already in use. The first task is to locate the open objects and confirm which records are reliable enough to work.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
-              {sourceData.map((item) => (
+              {sourceSystems.map((item) => (
                 <div key={item} className="bg-background p-6 text-lg font-medium leading-7">
                   {item}
                 </div>
@@ -116,9 +100,9 @@ export default function HowItWorksPage() {
       <Section className="bg-surface">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader eyebrow="Classification" title="Every open item becomes a revenue object.">
+            <SectionHeader title="Classification">
               <p>
-                Classification keeps the queue from becoming a loose task list. Different objects need different timing, tone, and approval rules.
+                Classification keeps the queue controlled. Different object types need different timing, tone, source checks, and approval rules.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
@@ -135,19 +119,15 @@ export default function HowItWorksPage() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
-            <SectionHeader eyebrow="Priority" title="The queue is not worked randomly.">
+            <SectionHeader title="Priority">
               <p>
-                Voliber uses A/B/C priority buckets based on value, age, clarity, likelihood of movement, and relationship risk. No fake score is needed.
+                The queue is ranked before work begins. Priority is based on operating judgment, not fake precision.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line md:grid-cols-3">
-              {[
-                ["A priority", "High-clarity items that should move first or need fast approval."],
-                ["B priority", "Useful follow-up opportunities with moderate age, value, or uncertainty."],
-                ["C priority", "Lower-risk or lower-clarity items kept in view without crowding the week."],
-              ].map(([bucket, text]) => (
-                <article key={bucket} className="bg-background p-6 sm:p-8">
-                  <h2 className="text-xl font-semibold tracking-tight">{bucket}</h2>
+              {priorityInputs.map(([input, text]) => (
+                <article key={input} className="bg-background p-6 sm:p-8">
+                  <h2 className="text-xl font-semibold tracking-tight">{input}</h2>
                   <p className="mt-4 leading-7 text-muted">{text}</p>
                 </article>
               ))}
@@ -158,15 +138,16 @@ export default function HowItWorksPage() {
 
       <Section className="bg-surface">
         <Container>
-          <SectionHeader eyebrow="Weekly loop" title="Approved action, observable movement, controlled escalation." />
-          <div className="mt-12 divide-y divide-line border-y border-line">
-            {operatingSteps.map((step, index) => (
-              <article key={step.title} className="grid gap-6 py-8 md:grid-cols-[120px_0.75fr_1.25fr] md:items-start">
-                <span className="font-mono text-sm text-accent">0{index + 1}</span>
-                <h2 className="text-2xl font-semibold tracking-tight">{step.title}</h2>
-                <p className="max-w-2xl text-lg leading-8 text-muted">{step.text}</p>
-              </article>
-            ))}
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <SectionHeader title="Approved execution" />
+            <div className="space-y-6 text-lg leading-8 text-muted">
+              <p>
+                Work only begins inside agreed rules: timing, tone, contact channel, touch frequency, and stop conditions. Voliber can send or prepare follow-up only where the client has approved the object type and action.
+              </p>
+              <p>
+                The point is controlled movement. The business keeps authority over relationship-sensitive items, exceptions, and decisions that change commercial terms.
+              </p>
+            </div>
           </div>
         </Container>
       </Section>
@@ -174,14 +155,30 @@ export default function HowItWorksPage() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader eyebrow="Weekly movement report" title="The business sees the state of the queue.">
+            <SectionHeader title="Exception control" />
+            <div className="space-y-6 text-lg leading-8 text-muted">
               <p>
-                The report is built for review and decisions. It should show work performed, movement created, exceptions held, and the next operating recommendation.
+                Disputes, unclear records, strategic accounts, unusual requests, discount questions, payment-plan requests, and sensitive replies are held instead of pushed forward.
+              </p>
+              <p>
+                Exceptions are routed back with context, recommended next action, and the decision needed from the client.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="bg-surface">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <SectionHeader title="Movement reporting">
+              <p>
+                The weekly report is the operating record: what was worked, what moved, what aged, what was held, and what decisions are needed next.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
               {reportItems.map((item) => (
-                <div key={item} className="bg-background p-5 text-lg font-medium">
+                <div key={item} className="bg-surface p-5 text-lg font-medium">
                   {item}
                 </div>
               ))}
