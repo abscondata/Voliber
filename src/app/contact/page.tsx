@@ -3,16 +3,15 @@ import { Container, PageIntro, Section } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description:
-    "Request a Voliber Pipeline Review.",
+  description: "Request a review with Voliber.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Contact" title="Request a Pipeline Review">
+      <PageIntro eyebrow="Contact" title="Request Review">
         <p>
-          Send the systems and open items that need review. The form opens an email draft to hello@voliber.com.
+          Send the systems and unresolved items that need review. The form opens an email draft to hello@voliber.com.
         </p>
       </PageIntro>
 
@@ -29,7 +28,7 @@ export default function ContactPage() {
               </p>
             </div>
             <form
-              action="mailto:hello@voliber.com?subject=Pipeline%20Review%20Request"
+              action="mailto:hello@voliber.com?subject=Review%20Request"
               method="post"
               encType="text/plain"
               className="border border-line bg-background p-5 sm:p-8"
@@ -45,13 +44,13 @@ export default function ContactPage() {
               </div>
               <label className="mt-6 block">
                 <span className="text-sm font-semibold text-foreground">
-                  Which open revenue queue needs review?
+                  Which unresolved items need review?
                 </span>
                 <textarea
-                  name="follow_up_problem"
+                  name="unresolved_items"
                   rows={7}
                   className="mt-3 w-full border border-line bg-surface px-4 py-3 text-base leading-7 outline-none transition-colors placeholder:text-muted/70 focus:border-accent"
-                  placeholder="Open invoices, stale proposals, failed payments, dormant opportunities, or another queue."
+                  placeholder="Receivables, proposals, failed payments, dormant opportunities, source systems, or context."
                 />
               </label>
               <p className="mt-5 text-sm leading-6 text-muted">

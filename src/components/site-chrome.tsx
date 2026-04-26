@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 const navLinks = [
-  { href: "/how-it-works", label: "Operating Model" },
+  { href: "/how-it-works", label: "Method" },
   { href: "/who-its-for", label: "Who It's For" },
   { href: "/contact", label: "Contact" },
 ];
@@ -24,7 +24,7 @@ export function SiteHeader() {
             href="/contact"
             className="border border-accent bg-accent px-4 py-2 text-sm font-medium text-accent-ink transition-colors hover:bg-foreground lg:hidden"
           >
-            Request a Pipeline Review
+            Request Review
           </Link>
         </div>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-muted">
@@ -37,7 +37,7 @@ export function SiteHeader() {
             href="/contact"
             className="hidden border border-accent bg-accent px-4 py-2 text-accent-ink transition-colors hover:bg-foreground lg:inline-flex"
           >
-            Request a Pipeline Review
+            Request Review
           </Link>
         </nav>
       </div>
@@ -57,7 +57,7 @@ export function SiteFooter() {
             <span className="text-lg font-semibold tracking-[0.12em]">VOLIBER</span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-6 text-muted">
-            Working-capital control for open receivables and stalled proposals.
+            Research-driven operations for revenue decay.
           </p>
         </div>
         <div className="grid gap-8 text-sm sm:grid-cols-3">
@@ -74,10 +74,10 @@ export function SiteFooter() {
           <div>
             <p className="font-semibold text-foreground">Focus</p>
             <div className="mt-4 flex flex-col gap-3 text-muted">
-              <span>Receivables</span>
-              <span>Stalled proposals</span>
-              <span>Approved follow-up</span>
-              <span>Weekly reporting</span>
+              <span>Revenue decay</span>
+              <span>Working-capital drag</span>
+              <span>Measured follow-up</span>
+              <span>State change</span>
             </div>
           </div>
           <div>

@@ -10,72 +10,49 @@ import {
 export const metadata: Metadata = {
   title: "Who It's For",
   description:
-    "Voliber is built for B2B service firms and agencies with open receivables, stale proposals, payment failures, or quiet opportunities that no one owns weekly.",
+    "Voliber is built for B2B service firms where commercial value decays after intent.",
 };
 
-const goodFits = [
-  {
-    title: "Marketing agencies",
-    text: "Retainer invoices, project invoices, and stale proposals without a weekly owner.",
-  },
-  {
-    title: "Web design firms",
-    text: "Proposal and payment queues that can age while the team is focused on delivery work.",
-  },
-  {
-    title: "IT service providers",
-    text: "Open receivables, payment failures, and service follow-up where records exist but ownership drifts.",
-  },
-  {
-    title: "Consulting firms",
-    text: "Relationship-sensitive invoice and proposal queues where tone and approval rules matter.",
-  },
-  {
-    title: "Small professional service firms",
-    text: "Open items that need priority, logging, and weekly review.",
-  },
+const examples = [
+  "Agencies",
+  "IT service providers",
+  "Consultants",
+  "Professional service firms",
 ];
 
-const fitSignals = [
-  "Invoice lists age between finance reviews",
-  "Proposals are sent but not revisited on schedule",
-  "Quiet opportunities sit in the CRM or inbox",
-  "Failed payments are noted but not worked through approved retry rules",
-  "The principal knows the queue matters but has no weekly owner",
-  "Tone, timing, and relationship context matter",
+const signals = [
+  "Receivables age between finance reviews",
+  "Proposals are issued and then drift",
+  "Payment failures lack a controlled path",
+  "Quiet opportunities sit in inboxes or CRM records",
 ];
 
 const poorFits = [
-  "Businesses needing legal pressure",
-  "Businesses with no usable records or source of truth",
-  "Companies seeking aggressive customer pressure",
-  "One-time blast outreach campaigns",
-  "Teams that do not want touches documented",
-  "Organizations too large for an owner-led operating review",
+  "Legal pressure",
+  "Aggressive customer pressure",
+  "No usable records",
+  "One-time blast campaigns",
+  "Undocumented work",
+  "Enterprise procurement programs",
 ];
 
 export default function WhoItsForPage() {
   return (
     <>
-      <PageIntro eyebrow="Who it's for" title="B2B service firms and agencies.">
+      <PageIntro eyebrow="Who it's for" title="For firms where revenue decays after intent.">
         <p>
-          For service firms with open receivables, stale proposals, payment failures, or quiet opportunities that no one owns weekly.
+          Voliber is built for B2B service firms with invoices, proposals, payment failures, and quiet opportunities that age without a dedicated operating desk.
         </p>
       </PageIntro>
 
       <Section className="bg-surface">
         <Container>
-          <SectionHeader title="Primary fit">
-            <p>
-              Voliber is for firms with existing records, meaningful open revenue, and a need for weekly control.
-            </p>
-          </SectionHeader>
-          <div className="mt-12 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
-            {goodFits.map((fit) => (
-              <article key={fit.title} className="bg-surface p-6 sm:p-8">
-                <h2 className="text-xl font-semibold tracking-tight">{fit.title}</h2>
-                <p className="mt-4 leading-7 text-muted">{fit.text}</p>
-              </article>
+          <SectionHeader title="Examples" />
+          <div className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
+            {examples.map((item) => (
+              <div key={item} className="bg-surface p-6 text-lg font-medium leading-7">
+                {item}
+              </div>
             ))}
           </div>
         </Container>
@@ -84,13 +61,11 @@ export default function WhoItsForPage() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader title="Fit signals">
-              <p>
-                The problem usually looks like open items with no consistent owner.
-              </p>
+            <SectionHeader title="Signals">
+              <p>The pattern is unresolved commercial value with no operating owner.</p>
             </SectionHeader>
             <ul className="divide-y divide-line border-y border-line">
-              {fitSignals.map((signal) => (
+              {signals.map((signal) => (
                 <li key={signal} className="py-5 text-lg font-medium leading-7">
                   {signal}
                 </li>
@@ -104,9 +79,7 @@ export default function WhoItsForPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <SectionHeader title="Not a fit">
-              <p>
-                Voliber is narrow by design. The work requires source records, clear authority, and a client willing to keep exceptions under control.
-              </p>
+              <p>The work requires source records, client authority, and controlled limits.</p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
               {poorFits.map((item) => (
@@ -123,10 +96,10 @@ export default function WhoItsForPage() {
         <Container>
           <div className="max-w-3xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-              If open items are aging without ownership.
+              If unresolved commercial value is aging.
             </h2>
             <div className="mt-10">
-              <PrimaryLink href="/contact">Request a Pipeline Review</PrimaryLink>
+              <PrimaryLink href="/contact">Request Review</PrimaryLink>
             </div>
           </div>
         </Container>

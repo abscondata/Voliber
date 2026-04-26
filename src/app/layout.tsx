@@ -16,15 +16,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://voliber.com"),
   title: {
-    default: "Voliber | Working-Capital Control",
+    default: "Voliber | Revenue Decay Operations",
     template: "%s | Voliber",
   },
-  description:
-    "Working-capital control for open receivables and stalled proposals inside B2B service firms.",
+  description: "Research-driven operations for revenue decay.",
   openGraph: {
-    title: "Voliber | Working-Capital Control",
-    description:
-      "Voliber helps B2B service firms work unpaid invoices, stalled proposals, payment failures, and quiet opportunities.",
+    title: "Voliber | Revenue Decay Operations",
+    description: "Research-driven operations for revenue decay.",
     url: "https://voliber.com",
     siteName: "Voliber",
     locale: "en_US",
