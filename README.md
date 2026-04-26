@@ -22,6 +22,16 @@ The site is built with Next.js App Router, TypeScript, and Tailwind CSS. It is r
 - [Client approval rules template](ops/client-approval-rules-template.md)
 - [Service scope](ops/service-scope.md)
 
+## Sales Assets
+
+- [Ideal customer profile](sales/ideal-customer-profile.md)
+- [Prospect list schema](sales/prospect-list-schema.csv)
+- [Qualification scorecard](sales/qualification-scorecard.md)
+- [Pipeline Review call script](sales/pipeline-review-call-script.md)
+- [Outbound sequence](sales/outbound-sequence.md)
+- [Objection handling](sales/objection-handling.md)
+- [First 100 prospect plan](sales/first-100-prospect-plan.md)
+
 ## Getting Started
 
 Install dependencies and run the development server:
