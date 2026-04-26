@@ -3,13 +3,11 @@ import type { ReactNode } from "react";
 
 const headerLinks = [
   { href: "/how-it-works", label: "METHOD" },
-  { href: "/opportunities", label: "OPPORTUNITIES" },
   { href: "/contact", label: "CONTACT" },
 ];
 
 const footerLinks = [
   { href: "/how-it-works", label: "METHOD" },
-  { href: "/opportunities", label: "OPPORTUNITIES" },
   { href: "/who-its-for", label: "WHO IT'S FOR" },
   { href: "/contact", label: "CONTACT" },
 ];
