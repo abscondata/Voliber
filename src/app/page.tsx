@@ -13,31 +13,31 @@ const queueItems = [
   },
   {
     title: "Proposals",
-    text: "Old estimates and proposals assigned a next action or closed.",
+    text: "Old estimates and proposals assigned a decision path or closed.",
   },
   {
     title: "Payment failures",
-    text: "Failed or declined payments routed through approved retry and contact rules.",
+    text: "Failed payments routed through approved retry rules.",
   },
   {
     title: "Dormant opportunities",
-    text: "Quiet leads and past conversations scheduled for measured reactivation or closure.",
+    text: "Quiet leads and past conversations reviewed for reactivation or closure.",
   },
 ];
 
 const deskItems = [
-  "Open receivables",
-  "Stalled proposals",
-  "Failed payments",
+  "Receivables",
+  "Proposals",
+  "Payment failures",
   "Dormant opportunities",
 ];
 
 const operatingDiscipline = [
   "Identify open revenue.",
-  "Assign priority and next action.",
+  "Set priority.",
   "Run approved follow-up.",
-  "Hold exceptions for review.",
-  "Report what changed.",
+  "Hold exceptions.",
+  "Report changes.",
 ];
 
 export default function Home() {
@@ -51,14 +51,14 @@ export default function Home() {
                 Working-capital control for unpaid invoices and stalled proposals.
               </h1>
               <p className="mt-8 max-w-2xl text-xl leading-9 text-muted">
-                Voliber helps B2B service firms work the receivables, proposals, failed payments, and dormant opportunities already sitting inside their systems.
+                Voliber works the receivables, proposals, payment failures, and dormant opportunities already sitting inside B2B service firms.
               </p>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-                Prioritized. Approved. Logged. Reported weekly.
+                Prioritized, approved, logged, and reported weekly.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <PrimaryLink href="/contact">Request a Pipeline Review</PrimaryLink>
-                <SecondaryLink href="/how-it-works">View Operating Model</SecondaryLink>
+                <SecondaryLink href="/how-it-works">Operating Model</SecondaryLink>
               </div>
             </div>
             <TheDesk />
@@ -70,7 +70,7 @@ export default function Home() {
         <Container>
           <SectionHeader title="What enters the queue">
             <p>
-              Voliber starts with the records already inside the business: invoice reports, A/R aging, proposal lists, failed payment records, inboxes, and CRM exports.
+              Voliber starts from existing records: invoice reports, A/R aging, proposal lists, failed payment records, inboxes, and CRM exports.
             </p>
           </SectionHeader>
           <div className="mt-12 grid gap-px bg-line md:grid-cols-2">
@@ -93,10 +93,10 @@ export default function Home() {
                 Revenue leakage is usually quiet. An invoice ages. A proposal sits. A failed payment is noted once. A lead stops replying.
               </p>
               <p>
-                None of these is dramatic by itself. Together, they tie up cash, blur the pipeline, and leave the owner guessing.
+                Together, those loose ends tie up cash, blur the pipeline, and leave the owner guessing.
               </p>
               <p>
-                Voliber turns those loose ends into a controlled weekly process.
+                Voliber puts them under weekly control.
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function Home() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <SectionHeader title="Operating discipline" />
+            <SectionHeader title="Discipline" />
             <ul className="divide-y divide-line border-y border-line">
               {operatingDiscipline.map((line) => (
                 <li key={line} className="py-5 text-lg font-medium leading-7">
@@ -123,7 +123,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <SectionHeader title="Built for B2B service firms.">
               <p>
-                Voliber is built for agencies, consultants, IT service providers, and professional service firms with invoice and proposal queues that no one consistently owns.
+                For agencies, consultants, IT service providers, and professional service firms with invoice and proposal queues that no one consistently owns.
               </p>
             </SectionHeader>
             <div className="mt-10">
@@ -140,12 +140,12 @@ function TheDesk() {
   return (
     <div className="border border-line bg-surface p-6 sm:p-8">
       <div className="border-b border-line pb-6">
-        <h2 className="text-2xl font-semibold tracking-tight">The desk</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Operating desk</h2>
         <p className="mt-5 leading-7 text-muted">
-          Voliber operates a weekly desk for open revenue.
+          Voliber maintains a weekly register of open revenue.
         </p>
         <p className="mt-4 leading-7 text-muted">
-          Each item is reviewed for value, age, clarity, risk, and next action. Clean items are worked through approved follow-up. Sensitive items are held for review. Every touch is recorded.
+          Each item is reviewed for value, age, clarity, risk, and required action. Clean items move through approved follow-up. Sensitive items are held. Every touch is recorded.
         </p>
       </div>
       <ul className="mt-6 grid gap-3 text-sm font-medium text-foreground">

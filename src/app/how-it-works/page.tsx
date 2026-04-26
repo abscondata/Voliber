@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {
   Container,
   PageIntro,
-  PrimaryLink,
   Section,
   SectionHeader,
 } from "@/components/site-chrome";
@@ -10,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Operating Model",
   description:
-    "How Voliber works receivables, proposals, failed payments, and dormant opportunities through a controlled weekly process.",
+    "How Voliber works receivables, proposals, payment failures, and quiet opportunities through a controlled weekly process.",
 };
 
 const sourceSystems = [
@@ -28,9 +27,9 @@ const classifications = [
   "Receivable",
   "Proposal",
   "Payment failure",
-  "Dormant opportunity",
+  "Quiet opportunity",
   "Dispute",
-  "Approval-required item",
+  "Held item",
 ];
 
 const priorityInputs = [
@@ -46,10 +45,9 @@ const reportItems = [
   "Dollars worked",
   "Replies received",
   "Payments or closures",
-  "Approval-required exceptions",
-  "Open items still aging",
-  "Client decisions needed",
-  "Recommended next actions",
+  "Held items",
+  "Aging items",
+  "Decisions needed",
 ];
 
 export default function HowItWorksPage() {
@@ -57,7 +55,7 @@ export default function HowItWorksPage() {
     <>
       <PageIntro eyebrow="Operating Model" title="How the work is controlled.">
         <p>
-          Voliber works from the systems already inside the business. The process is weekly, documented, and governed by approval rules.
+          Voliber works from existing systems. The process is weekly, documented, and governed by client authority.
         </p>
       </PageIntro>
 
@@ -67,10 +65,10 @@ export default function HowItWorksPage() {
             <SectionHeader title="Revenue items" />
             <div className="space-y-6 text-lg leading-8 text-muted">
               <p>
-                The queue begins with open invoices, stale proposals, failed payments, dormant opportunities, disputes, and items that need approval.
+                The queue begins with open invoices, stale proposals, payment failures, quiet opportunities, disputes, and held items.
               </p>
               <p>
-                Each item needs a source, age, status, priority, approval posture, and next action before work begins.
+                Each item needs a source, age, status, priority, and action path before work begins.
               </p>
             </div>
           </div>
@@ -138,10 +136,10 @@ export default function HowItWorksPage() {
       <Section className="bg-surface">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader title="Approved execution" />
+            <SectionHeader title="Execution" />
             <div className="space-y-6 text-lg leading-8 text-muted">
               <p>
-                Work only begins inside agreed rules: timing, tone, contact channel, touch frequency, and stop conditions. Voliber can send or prepare follow-up only where the client has approved the object type and action.
+                Work only begins inside agreed limits: timing, tone, contact channel, touch frequency, and stop conditions.
               </p>
               <p>
                 The business keeps authority over relationship-sensitive items, exceptions, and decisions that change commercial terms.
@@ -154,13 +152,13 @@ export default function HowItWorksPage() {
       <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader title="Exception control" />
+            <SectionHeader title="Exceptions" />
             <div className="space-y-6 text-lg leading-8 text-muted">
               <p>
                 Disputes, unclear records, strategic accounts, unusual requests, discount questions, payment-plan requests, and sensitive replies are held instead of pushed forward.
               </p>
               <p>
-                Exceptions are routed back with context, recommended next action, and the decision needed from the client.
+                Exceptions are routed back with context and the decision needed from the client.
               </p>
             </div>
           </div>
@@ -170,9 +168,9 @@ export default function HowItWorksPage() {
       <Section className="bg-surface">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader title="Weekly reporting">
+            <SectionHeader title="Reporting">
               <p>
-                The weekly report shows what was worked, what changed, what aged, what was held, and what decisions are needed next.
+                The report shows what was worked, what changed, what was held, and what needs a client decision.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
@@ -182,9 +180,6 @@ export default function HowItWorksPage() {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="mt-14">
-            <PrimaryLink href="/contact">Request a Pipeline Review</PrimaryLink>
           </div>
         </Container>
       </Section>

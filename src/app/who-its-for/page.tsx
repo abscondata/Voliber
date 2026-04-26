@@ -10,13 +10,13 @@ import {
 export const metadata: Metadata = {
   title: "Who It's For",
   description:
-    "Voliber is built for B2B service firms and agencies with invoice, proposal, and dormant opportunity queues that no one consistently owns.",
+    "Voliber is built for B2B service firms and agencies with open receivables, stale proposals, payment failures, or quiet opportunities that no one owns weekly.",
 };
 
 const goodFits = [
   {
     title: "Marketing agencies",
-    text: "Retainer invoices, project invoices, stale proposals, and quiet opportunities without a weekly owner.",
+    text: "Retainer invoices, project invoices, and stale proposals without a weekly owner.",
   },
   {
     title: "Web design firms",
@@ -24,7 +24,7 @@ const goodFits = [
   },
   {
     title: "IT service providers",
-    text: "Open invoices, payment failures, and service follow-up where records exist but next actions drift.",
+    text: "Open receivables, payment failures, and service follow-up where records exist but ownership drifts.",
   },
   {
     title: "Consulting firms",
@@ -32,17 +32,17 @@ const goodFits = [
   },
   {
     title: "Small professional service firms",
-    text: "Invoice and proposal queues that need priority, logging, and a weekly report.",
+    text: "Open items that need priority, logging, and weekly review.",
   },
 ];
 
 const fitSignals = [
   "Invoice lists age between finance reviews",
   "Proposals are sent but not revisited on schedule",
-  "Dormant opportunities sit in the CRM or inbox without a next action",
+  "Quiet opportunities sit in the CRM or inbox",
   "Failed payments are noted but not worked through approved retry rules",
-  "The principal knows the queue matters but has no fixed weekly owner",
-  "Tone, timing, and relationship context need approval rules",
+  "The principal knows the queue matters but has no weekly owner",
+  "Tone, timing, and relationship context matter",
 ];
 
 const poorFits = [
@@ -59,7 +59,7 @@ export default function WhoItsForPage() {
     <>
       <PageIntro eyebrow="Who it's for" title="B2B service firms and agencies.">
         <p>
-          Firms with invoice, proposal, and dormant opportunity queues that no one consistently owns.
+          For service firms with open receivables, stale proposals, payment failures, or quiet opportunities that no one owns weekly.
         </p>
       </PageIntro>
 
@@ -67,7 +67,7 @@ export default function WhoItsForPage() {
         <Container>
           <SectionHeader title="Primary fit">
             <p>
-              Voliber is for service firms with existing records, meaningful open revenue, and a need for weekly control.
+              Voliber is for firms with existing records, meaningful open revenue, and a need for weekly control.
             </p>
           </SectionHeader>
           <div className="mt-12 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
@@ -86,7 +86,7 @@ export default function WhoItsForPage() {
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <SectionHeader title="Fit signals">
               <p>
-                The problem usually looks like invoice, proposal, and opportunity queues with no consistent owner.
+                The problem usually looks like open items with no consistent owner.
               </p>
             </SectionHeader>
             <ul className="divide-y divide-line border-y border-line">
@@ -105,7 +105,7 @@ export default function WhoItsForPage() {
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <SectionHeader title="Not a fit">
               <p>
-                Voliber is narrow by design. The work requires source records, approval rules, and a client willing to keep exceptions under control.
+                Voliber is narrow by design. The work requires source records, clear authority, and a client willing to keep exceptions under control.
               </p>
             </SectionHeader>
             <div className="grid gap-px bg-line sm:grid-cols-2">
@@ -123,7 +123,7 @@ export default function WhoItsForPage() {
         <Container>
           <div className="max-w-3xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-              If invoice, proposal, payment, or dormant opportunity queues are aging without ownership, request a Pipeline Review.
+              If open items are aging without ownership.
             </h2>
             <div className="mt-10">
               <PrimaryLink href="/contact">Request a Pipeline Review</PrimaryLink>

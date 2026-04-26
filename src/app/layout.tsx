@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Voliber | Working-Capital Control",
     description:
-      "Voliber helps B2B service firms work unpaid invoices, stalled proposals, failed payments, and dormant opportunities.",
+      "Voliber helps B2B service firms work unpaid invoices, stalled proposals, payment failures, and quiet opportunities.",
     url: "https://voliber.com",
     siteName: "Voliber",
     locale: "en_US",

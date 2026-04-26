@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Container, PageIntro, Section, SectionHeader } from "@/components/site-chrome";
+import { Container, PageIntro, Section } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Request a Pipeline Review" title="Request a Pipeline Review.">
+      <PageIntro eyebrow="Contact" title="Request a Pipeline Review">
         <p>
-          Share the systems, aging items, and approval rules that need review. This form opens an email draft.
+          Send the systems and open items that need review. The form opens an email draft to hello@voliber.com.
         </p>
       </PageIntro>
 
@@ -20,8 +20,7 @@ export default function ContactPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <SectionHeader eyebrow="Pipeline review" title="A short intake." />
-              <p className="mt-6 max-w-md leading-7 text-muted">
+              <p className="max-w-md leading-7 text-muted">
                 For direct email, use{" "}
                 <a href="mailto:hello@voliber.com" className="font-medium text-foreground underline decoration-line underline-offset-4">
                   hello@voliber.com
