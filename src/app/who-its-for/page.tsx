@@ -37,34 +37,53 @@ const questions = [
 export default function WhoItsForPage() {
   return (
     <PageShell>
-      <h1 className="text-4xl sm:text-5xl">Who it&apos;s for</h1>
-      <p>
-        Voliber works with US-based B2B service firms — agencies, consultancies,
-        IT service providers, and professional service firms — typically in the
-        $500K–$5M annual revenue range, where invoices, proposals, payment
-        failures, and dormant opportunities accumulate without a dedicated
-        operating function.
-      </p>
-      <p>
-        The work requires source records, client authority over follow-up, and
-        defined approval limits.
-      </p>
-      <p>
-        Voliber does not work with consumer debt portfolios, regulated medical
-        collections, legal enforcement, dispute-heavy contractor work, or
-        engagements that require pressure-based contact.
-      </p>
+      <h1
+        className="font-display text-[56px] font-normal sm:text-[88px]"
+        style={{ letterSpacing: "-0.02em", lineHeight: 1 }}
+      >
+        Who it&apos;s for
+      </h1>
 
-      <hr className="my-12 border-0 border-t border-line" />
+      <div className="mt-12 space-y-[1.2em] text-[19px] leading-[1.55]">
+        <p>
+          Voliber works with US-based B2B service firms — agencies,
+          consultancies, IT service providers, and professional service firms —
+          typically in the $500K–$5M annual revenue range, where invoices,
+          proposals, payment failures, and dormant opportunities accumulate
+          without a dedicated operating function.
+        </p>
+        <p>
+          The work requires source records, client authority over follow-up, and
+          defined approval limits.
+        </p>
+        <p>
+          Voliber does not work with consumer debt portfolios, regulated medical
+          collections, legal enforcement, dispute-heavy contractor work, or
+          engagements that require pressure-based contact.
+        </p>
+      </div>
 
-      <h2 className="text-3xl">Questions</h2>
-      <div className="mt-6 space-y-8">
-        {questions.map((item) => (
-          <article key={item.question}>
-            <h3 className="text-xl">{item.question}</h3>
-            <p>{item.answer}</p>
-          </article>
-        ))}
+      <div className="mt-20">
+        <p
+          className="pb-3 font-mono text-[12px] uppercase leading-6 text-muted"
+          style={{ letterSpacing: "0.08em" }}
+        >
+          Questions
+        </p>
+        <hr className="border-0 border-t border-line" />
+        <div className="mt-12 space-y-12">
+          {questions.map((item) => (
+            <article key={item.question}>
+              <h2
+                className="font-display text-[24px] font-normal text-foreground"
+                style={{ letterSpacing: "-0.015em", lineHeight: 1.2 }}
+              >
+                {item.question}
+              </h2>
+              <p className="mt-3 text-[19px] leading-[1.55]">{item.answer}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </PageShell>
   );

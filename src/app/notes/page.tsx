@@ -40,21 +40,43 @@ const notes = [
 export default function NotesPage() {
   return (
     <PageShell>
-      <h1 className="text-4xl sm:text-5xl">Notes</h1>
-      <p className="italic text-muted">
+      <h1
+        className="font-display text-[56px] font-normal sm:text-[88px]"
+        style={{ letterSpacing: "-0.02em", lineHeight: 1 }}
+      >
+        Notes
+      </h1>
+      <p className="mt-6 text-[17px] italic leading-[1.5] text-muted">
         Working notes on revenue decay and recovery operations. Updated as
         material evolves.
       </p>
-      <div className="mt-12">
+
+      <div className="mt-16">
         {notes.map((note, index) => (
           <article
             key={note.header}
-            className={index === 0 ? "pb-12" : "border-t border-line py-12"}
+            className={
+              index === 0
+                ? "pb-16"
+                : "border-t border-line py-16"
+            }
           >
-            <p className="font-mono text-[13px] leading-6 text-muted">{note.header}</p>
-            <h2 className="text-2xl sm:text-3xl">{note.title}</h2>
-            <p>{note.body}</p>
-            <p className="italic text-muted">{note.sources}</p>
+            <p
+              className="font-mono text-[12px] uppercase leading-6 text-muted"
+              style={{ letterSpacing: "0.08em" }}
+            >
+              {note.header}
+            </p>
+            <h2
+              className="mt-4 font-display text-[32px] font-normal text-foreground"
+              style={{ letterSpacing: "-0.015em", lineHeight: 1.15 }}
+            >
+              {note.title}
+            </h2>
+            <p className="mt-5 text-[19px] leading-[1.55]">{note.body}</p>
+            <p className="mt-4 text-[15px] italic leading-[1.5] text-muted">
+              {note.sources}
+            </p>
           </article>
         ))}
       </div>
