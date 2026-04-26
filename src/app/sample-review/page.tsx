@@ -1,130 +1,139 @@
 import type { Metadata } from "next";
-import {
-  Container,
-  PageIntro,
-  Section,
-  SectionHeader,
-} from "@/components/site-chrome";
+import { PageShell } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
-  title: "Sample Pipeline Review",
-  description: "Illustrative Pipeline Review format from Voliber.",
+  title: "Sample Review Format",
+  description: "Illustrative sample review format from Voliber.",
 };
+
+const openValueRows = [
+  ["Receivables", "47", "$182,400", "38"],
+  ["Proposals open", "12", "$310,000", "21"],
+  ["Payment failures", "3", "$9,200", "16"],
+  ["Dormant leads", "28", "n/a", "94"],
+];
+
+const agingRows = [
+  ["1–30 days", "22", "$84,100", "46%"],
+  ["31–60 days", "14", "$54,800", "30%"],
+  ["61–90 days", "7", "$28,500", "16%"],
+  ["91+ days", "4", "$15,000", "8%"],
+];
+
+const priorityRows = [
+  ["R-104", "Receivable", "$24,500", "42", "A"],
+  ["P-019", "Proposal", "$48,000", "14", "A"],
+  ["R-091", "Receivable", "$11,200", "67", "B"],
+  ["P-007", "Proposal", "$22,000", "31", "B"],
+  ["R-118", "Receivable", "$6,800", "19", "B"],
+];
 
 export default function SampleReviewPage() {
   return (
-    <>
-      <PageIntro eyebrow="Sample" title="Sample Pipeline Review">
-        <p>
-          Illustrative format only. Mock data. This page shows the shape of the diagnostic a buyer receives, not client results.
+    <PageShell wide>
+      <div className="max-w-[62ch]">
+        <h1 className="text-4xl sm:text-5xl">Sample review format</h1>
+        <p className="italic text-muted">
+          Illustrative format. All figures, names, and references are fabricated.
         </p>
-      </PageIntro>
+      </div>
 
-      <Section className="bg-surface">
-        <Container>
-          <SectionHeader title="Source data reviewed" />
-          <Table
-            headers={["Source", "File/report/system", "Reliability", "Notes"]}
-            rows={[
-              ["[Source]", "[Report or export]", "[High / medium / low]", "[Notes]"],
-              ["[Source]", "[Report or export]", "[High / medium / low]", "[Notes]"],
-            ]}
-          />
-        </Container>
-      </Section>
+      <pre className="mt-12 overflow-x-auto border-y border-line py-6 font-mono text-[13px] leading-7 text-foreground tnum">
+{`PIPELINE REVIEW
+Client            [Redacted agency, LLC]
+Period            14-day diagnostic
+Prepared          [Date]
+Prepared by       Voliber`}
+      </pre>
 
-      <Section>
-        <Container>
-          <SectionHeader title="Open revenue map" />
-          <Table
-            headers={["Category", "Count", "Value", "Age profile"]}
-            rows={[
-              ["Receivables", "[Count]", "[Value]", "[Age profile]"],
-              ["Proposals", "[Count]", "[Value]", "[Age profile]"],
-              ["Payment failures", "[Count]", "[Value]", "[Age profile]"],
-              ["Dormant opportunities", "[Count]", "[Value]", "[Age profile]"],
-            ]}
-          />
-        </Container>
-      </Section>
+      <section className="mt-12">
+        <h2 className="text-2xl">1. Open value summary</h2>
+        <DataTable
+          headers={["Object type", "Count", "Total value", "Median age (days)"]}
+          rows={openValueRows}
+          numericColumns={[1, 2, 3]}
+        />
+      </section>
 
-      <Section className="bg-surface">
-        <Container>
-          <SectionHeader title="Priority items" />
-          <Table
-            headers={["Priority", "Item/category", "Reason", "Recommended handling"]}
-            rows={[
-              ["A", "[Item/category]", "[Clear value and source record]", "[Approved handling]"],
-              ["B", "[Item/category]", "[Useful but requires context]", "[Measured handling]"],
-              ["C", "[Item/category]", "[Low signal or unclear]", "[Close, hold, or monitor]"],
-            ]}
-          />
-        </Container>
-      </Section>
+      <section className="mt-12">
+        <h2 className="text-2xl">2. Aging distribution — receivables</h2>
+        <DataTable
+          headers={["Bucket", "Count", "Value", "Share"]}
+          rows={agingRows}
+          numericColumns={[1, 2, 3]}
+        />
+      </section>
 
-      <Section>
-        <Container>
-          <SectionHeader title="Aging observations" />
-          <Table
-            headers={["Bucket", "Count", "Value", "Risk"]}
-            rows={[
-              ["[Age bucket]", "[Count]", "[Value]", "[Risk]"],
-              ["[Age bucket]", "[Count]", "[Value]", "[Risk]"],
-            ]}
-          />
-        </Container>
-      </Section>
+      <section className="mt-12">
+        <h2 className="text-2xl">3. Priority items — top 10 (excerpt)</h2>
+        <p className="max-w-[62ch]">
+          Ranked by value × recovery probability, less relationship-risk
+          adjustment.
+        </p>
+        <DataTable
+          headers={["ID", "Type", "Value", "Age", "Priority"]}
+          rows={priorityRows}
+          numericColumns={[2, 3, 4]}
+        />
+      </section>
 
-      <Section className="bg-surface">
-        <Container>
-          <SectionHeader title="Held items" />
-          <Table
-            headers={["Reason held", "Item/category", "Required decision"]}
-            rows={[
-              ["[Dispute / sensitive account / unclear record]", "[Item/category]", "[Client decision needed]"],
-              ["[Unusual terms / chargeback / legal threat]", "[Item/category]", "[Client decision needed]"],
-            ]}
-          />
-        </Container>
-      </Section>
+      <section className="mt-12 max-w-[62ch]">
+        <h2 className="text-2xl">4. Held items</h2>
+        <p>
+          Three items held from active follow-up: one disputed receivable, one
+          strategic-account proposal, one item with insufficient context for
+          clean action. Detailed in appendix.
+        </p>
+      </section>
 
-      <Section>
-        <Container>
-          <SectionHeader title="45-day recommendation">
-            <p>
-              Normalize the records, confirm limits, work priority items first, hold sensitive items, and review state change at the end of the period.
-            </p>
-          </SectionHeader>
-        </Container>
-      </Section>
-    </>
+      <section className="mt-12 max-w-[62ch]">
+        <h2 className="text-2xl">5. 45-day operating recommendation</h2>
+        <p>
+          Cadence and channel recommendations by object type. Approval gates
+          defined. Exception-handling protocol noted. Reporting cadence weekly,
+          with a 45-day close-out review.
+        </p>
+      </section>
+    </PageShell>
   );
 }
 
-function Table({
+function DataTable({
   headers,
   rows,
+  numericColumns,
 }: {
   headers: string[];
   rows: string[][];
+  numericColumns: number[];
 }) {
   return (
-    <div className="mt-8 overflow-x-auto border border-line">
-      <table className="min-w-full border-collapse text-left text-sm">
-        <thead className="bg-background text-foreground">
-          <tr>
-            {headers.map((header) => (
-              <th key={header} className="border-b border-line px-4 py-3 font-semibold">
+    <div className="mt-5 overflow-x-auto">
+      <table className="min-w-[640px] border-collapse font-mono text-[13px] leading-6 tnum">
+        <thead>
+          <tr className="border-b border-line">
+            {headers.map((header, index) => (
+              <th
+                key={header}
+                className={`py-2 font-normal ${
+                  numericColumns.includes(index) ? "pl-6 text-right" : "pr-6 text-left"
+                }`}
+              >
                 {header}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody className="text-muted">
-          {rows.map((row, rowIndex) => (
-            <tr key={`${row.join("|")}-${rowIndex}`} className="border-b border-line last:border-b-0">
-              {row.map((cell, cellIndex) => (
-                <td key={`${cell}-${cellIndex}`} className="px-4 py-3 leading-6">
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.join("|")} className="border-b border-line">
+              {row.map((cell, index) => (
+                <td
+                  key={`${row[0]}-${cell}-${index}`}
+                  className={`py-2 ${
+                    numericColumns.includes(index) ? "pl-6 text-right" : "pr-6 text-left"
+                  }`}
+                >
                   {cell}
                 </td>
               ))}

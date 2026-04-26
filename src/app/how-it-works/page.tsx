@@ -1,165 +1,44 @@
 import type { Metadata } from "next";
-import {
-  Container,
-  PageIntro,
-  Section,
-  SectionHeader,
-} from "@/components/site-chrome";
+import { PageShell } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
   title: "Method",
-  description:
-    "Voliber's method for research-driven operations around revenue decay.",
+  description: "Voliber's method for operating the decay layer of B2B service revenue.",
 };
-
-const inputs = [
-  "Receivables",
-  "Proposals",
-  "Payment failures",
-  "CRM records",
-  "Inbox history",
-  "Owner context",
-];
-
-const states = [
-  "Open",
-  "Aging",
-  "Disputed",
-  "Held",
-  "Acted",
-  "Replied",
-  "Paid",
-  "Closed",
-];
-
-const rankingInputs = [
-  "Value",
-  "Age",
-  "Clarity",
-  "Friction",
-  "Risk",
-  "Likely movement",
-];
-
-const outcomes = [
-  "Paid",
-  "Replied",
-  "Closed",
-  "Escalated",
-  "Held",
-  "Scheduled",
-];
 
 export default function HowItWorksPage() {
   return (
-    <>
-      <PageIntro eyebrow="Method" title="Method">
-        <p>
-          Revenue decay begins after commercial intent is recorded but before cash, closure, or decision.
-        </p>
-      </PageIntro>
-
-      <Section className="bg-surface">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader title="Thesis" />
-            <p className="text-lg leading-8 text-muted">
-              The work is to locate unresolved commercial value, reduce ambiguity, and move each item to a controlled state.
-            </p>
-          </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <SectionHeader title="Inputs" />
-            <div className="grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-              {inputs.map((item) => (
-                <div key={item} className="bg-background p-6 text-lg font-medium leading-7">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="bg-surface">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader title="State">
-              <p>Each item is reduced to a practical state.</p>
-            </SectionHeader>
-            <div className="grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
-              {states.map((item) => (
-                <div key={item} className="bg-surface p-5 text-lg font-medium">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <SectionHeader title="Ranking">
-              <p>
-                Items are ranked by value, age, clarity, friction, risk, and likely movement.
-              </p>
-            </SectionHeader>
-            <div className="grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-              {rankingInputs.map((item) => (
-                <div key={item} className="bg-background p-6 text-lg font-medium leading-7">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="bg-surface">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader title="Controlled action" />
-            <div className="space-y-6 text-lg leading-8 text-muted">
-              <p>Follow-up occurs only inside approved limits.</p>
-              <p>Sensitive items are held.</p>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader title="Measurement">
-              <p>The output is not cash alone. It is state change.</p>
-            </SectionHeader>
-            <div className="grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-              {outcomes.map((item) => (
-                <div key={item} className="bg-background p-6 text-lg font-medium leading-7">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="bg-surface">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeader title="Review" />
-            <p className="text-lg leading-8 text-muted">
-              The client sees what changed, what remained unresolved, and where a decision is needed.
-            </p>
-          </div>
-        </Container>
-      </Section>
-    </>
+    <PageShell>
+      <h1 className="text-4xl sm:text-5xl">Method</h1>
+      <p>
+        Revenue decay begins after commercial intent is recorded but before
+        cash, closure, or decision. An invoice issued is not cash. A proposal
+        sent is not a decision. A failed payment is not a closed transaction. A
+        dormant lead is not a dead one. These are unresolved positions inside
+        the business, and most firms do not lose revenue in a single visible
+        event — they lose it through aging.
+      </p>
+      <p>
+        The operating model is direct. Open items are inventoried from existing
+        records: receivables, proposals, payment failures, CRM exports, inbox
+        history, owner context. Each item is classified by type and current
+        state, then ranked on a defined feature set — value, age, clarity,
+        friction, recovery probability, and relationship risk. Action proceeds
+        inside client-approved limits, with sensitive items held for owner
+        review. Each touch is logged. Each state change is reported.
+      </p>
+      <p>
+        The output is not cash alone. It is state change: paid, replied, closed,
+        escalated, held, or deprioritized. Closure has value independent of
+        recovery. Items that cannot move are documented and removed from the
+        active queue rather than left to age silently.
+      </p>
+      <pre className="mt-12 overflow-x-auto border-t border-line pt-6 font-mono text-[13px] leading-7 text-foreground tnum">
+{`Object types     receivable · proposal · payment failure · dormant lead
+States           open · aging · acted · replied · disputed · held · paid · closed
+Ranking inputs   value · age · clarity · friction · recovery probability · relationship risk
+Outputs          paid · replied · closed · escalated · held · scheduled`}
+      </pre>
+    </PageShell>
   );
 }

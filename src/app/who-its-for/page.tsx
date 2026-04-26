@@ -1,153 +1,71 @@
 import type { Metadata } from "next";
-import {
-  Container,
-  PageIntro,
-  PrimaryLink,
-  Section,
-  SectionHeader,
-} from "@/components/site-chrome";
+import { PageShell } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
   title: "Who It's For",
-  description:
-    "Voliber is built for B2B service firms where commercial value decays after intent.",
+  description: "Who Voliber is built for.",
 };
-
-const examples = [
-  "Agencies",
-  "IT service providers",
-  "Consultants",
-  "Professional service firms",
-];
-
-const signals = [
-  "Receivables age between finance reviews",
-  "Proposals are issued and then drift",
-  "Payment failures lack a controlled path",
-  "Quiet opportunities sit in inboxes or CRM records",
-];
-
-const poorFits = [
-  "Legal pressure",
-  "Aggressive customer pressure",
-  "No usable records",
-  "One-time blast campaigns",
-  "Undocumented work",
-  "Enterprise procurement programs",
-];
 
 const questions = [
   {
-    question: "Is this collections?",
+    question: "What records are required?",
     answer:
-      "No. Voliber does not make legal threats, pressure customers, or act as a collection agency. The work is limited to approved business follow-up and operating review.",
+      "An A/R aging export, an open proposal or estimate list, and any failed-payment log. CRM export is optional. Format does not need to be standardized — reconciliation is part of the diagnostic.",
   },
   {
-    question: "What data do you need?",
+    question: "Who handles customer contact?",
     answer:
-      "Usually invoice reports, A/R aging, proposal lists, failed payment records, CRM exports, or inbox records.",
+      "Contact occurs from client-owned channels under approved limits. Voliber does not assume the client's identity, assign debts, or operate as a third-party collector.",
   },
   {
-    question: "Do you contact customers directly?",
+    question: "What is the legal posture?",
     answer:
-      "Only if the client approves the object type, channel, tone, and limits. Sensitive items are held.",
+      "Voliber operates as a service provider on client-owned accounts. The work falls outside the FDCPA's primary scope, which addresses consumer debt, and below state licensing thresholds for third-party collection. Scope is documented at engagement.",
   },
   {
-    question: "What happens with disputes?",
+    question: "How is data handled?",
     answer:
-      "Disputes, chargebacks, legal threats, unusual terms, and sensitive accounts are routed back to the client.",
+      "Data is reviewed in the form provided by the client, not retained beyond engagement scope, and not aggregated into shared datasets without explicit consent.",
   },
   {
     question: "Who operates Voliber?",
     answer:
-      "Voliber is operated by Robin Howley through Devine. The business uses documented review, approval, and reporting processes.",
+      "Voliber is operated directly by its founder. Engagements are not routed through account management.",
   },
 ];
 
 export default function WhoItsForPage() {
   return (
-    <>
-      <PageIntro eyebrow="Who it's for" title="For firms where revenue decays after intent.">
-        <p>
-          Voliber is built for B2B service firms with invoices, proposals, payment failures, and quiet opportunities that age without a dedicated operating desk.
-        </p>
-      </PageIntro>
+    <PageShell>
+      <h1 className="text-4xl sm:text-5xl">Who it&apos;s for</h1>
+      <p>
+        Voliber works with US-based B2B service firms — agencies, consultancies,
+        IT service providers, and professional service firms — typically in the
+        $500K–$5M annual revenue range, where invoices, proposals, payment
+        failures, and dormant opportunities accumulate without a dedicated
+        operating function.
+      </p>
+      <p>
+        The work requires source records, client authority over follow-up, and
+        defined approval limits.
+      </p>
+      <p>
+        Voliber does not work with consumer debt portfolios, regulated medical
+        collections, legal enforcement, dispute-heavy contractor work, or
+        engagements that require pressure-based contact.
+      </p>
 
-      <Section className="bg-surface">
-        <Container>
-          <SectionHeader title="Examples" />
-          <div className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
-            {examples.map((item) => (
-              <div key={item} className="bg-surface p-6 text-lg font-medium leading-7">
-                {item}
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
+      <hr className="my-12 border-0 border-t border-line" />
 
-      <Section>
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader title="Signals">
-              <p>The pattern is unresolved commercial value with no operating owner.</p>
-            </SectionHeader>
-            <ul className="divide-y divide-line border-y border-line">
-              {signals.map((signal) => (
-                <li key={signal} className="py-5 text-lg font-medium leading-7">
-                  {signal}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="bg-surface">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader title="Not a fit">
-              <p>The work requires source records, client authority, and controlled limits.</p>
-            </SectionHeader>
-            <div className="grid gap-px bg-line sm:grid-cols-2">
-              {poorFits.map((item) => (
-                <div key={item} className="bg-surface p-6 text-lg font-medium leading-7 text-muted">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <SectionHeader title="Questions before a review" />
-            <div className="divide-y divide-line border-y border-line">
-              {questions.map((item) => (
-                <article key={item.question} className="py-6">
-                  <h2 className="text-lg font-semibold tracking-tight">{item.question}</h2>
-                  <p className="mt-3 leading-7 text-muted">{item.answer}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <section className="border-t border-line py-20 sm:py-24">
-        <Container>
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-              If unresolved commercial value is aging.
-            </h2>
-            <div className="mt-10">
-              <PrimaryLink href="/contact">Request Review</PrimaryLink>
-            </div>
-          </div>
-        </Container>
-      </section>
-    </>
+      <h2 className="text-3xl">Questions</h2>
+      <div className="mt-6 space-y-8">
+        {questions.map((item) => (
+          <article key={item.question}>
+            <h3 className="text-xl">{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </PageShell>
   );
 }
