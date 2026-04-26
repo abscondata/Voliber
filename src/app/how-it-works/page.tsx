@@ -2,26 +2,26 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
-  title: "Approach",
-  description: "Voliber's approach to unresolved B2B service revenue.",
+  title: "Method",
+  description: "Voliber's method for unresolved B2B service revenue.",
 };
 
 const sections = [
   {
-    title: "Domain",
+    title: "Surface",
     body: "Receivables, proposals, payment failures, and dormant intent inside B2B service firms.",
   },
   {
-    title: "Signal",
-    body: "Each item carries age, value, friction, risk, and evidence of intent.",
+    title: "Reduction",
+    body: "Each item is reduced to age, value, state, friction, risk, and control.",
   },
   {
     title: "Ranking",
-    body: "The work is ordered by recoverability, required control, and expected state change.",
+    body: "Work is ordered by recoverability, required control, and expected state change.",
   },
   {
     title: "Action",
-    body: "Follow-up occurs only inside operating limits. Sensitive items are held.",
+    body: "Work proceeds only inside operating limits. Sensitive items are held.",
   },
   {
     title: "Output",
@@ -36,7 +36,7 @@ export default function HowItWorksPage() {
         className="font-display text-[56px] font-normal sm:text-[88px]"
         style={{ letterSpacing: "-0.02em", lineHeight: 1 }}
       >
-        Approach
+        Method
       </h1>
 
       <p className="mt-12 max-w-[62ch] text-[19px] leading-[1.55]">

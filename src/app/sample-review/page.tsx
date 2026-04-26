@@ -4,6 +4,10 @@ import { PageShell } from "@/components/site-chrome";
 export const metadata: Metadata = {
   title: "Sample Format",
   description: "Illustrative sample format from Voliber.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const sections = [

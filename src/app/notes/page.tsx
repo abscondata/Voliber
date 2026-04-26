@@ -4,6 +4,10 @@ import { PageShell } from "@/components/site-chrome";
 export const metadata: Metadata = {
   title: "References",
   description: "Selected public sources informing Voliber's operating thesis.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const references = [

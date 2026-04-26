@@ -2,15 +2,16 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 const headerLinks = [
-  { href: "/how-it-works", label: "approach" },
-  { href: "/contact", label: "contact" },
+  { href: "/how-it-works", label: "METHOD" },
+  { href: "/opportunities", label: "OPPORTUNITIES" },
+  { href: "/contact", label: "CONTACT" },
 ];
 
 const footerLinks = [
-  { href: "/how-it-works", label: "approach" },
-  { href: "/sample-review", label: "sample" },
-  { href: "/who-its-for", label: "who it's for" },
-  { href: "/contact", label: "contact" },
+  { href: "/how-it-works", label: "METHOD" },
+  { href: "/opportunities", label: "OPPORTUNITIES" },
+  { href: "/who-its-for", label: "WHO IT'S FOR" },
+  { href: "/contact", label: "CONTACT" },
 ];
 
 export function SiteHeader() {
@@ -24,7 +25,7 @@ export function SiteHeader() {
         >
           VOLIBER
         </Link>
-        <nav className="flex flex-wrap items-baseline gap-x-8 gap-y-2 font-mono text-[12px] lowercase leading-none text-muted">
+        <nav className="flex flex-wrap items-baseline gap-x-8 gap-y-2 font-mono text-[12px] leading-none text-muted">
           {headerLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
@@ -50,14 +51,14 @@ export function SiteFooter() {
         </div>
         <nav className="flex flex-col items-start gap-2">
           {footerLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="lowercase">
+            <Link key={link.href} href={link.href}>
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="flex flex-col items-start gap-2">
           <a href="mailto:hello@voliber.com">hello@voliber.com</a>
-          <p className="no-underline">A Devine operating company</p>
+          <p className="no-underline">A Devine Company</p>
         </div>
       </div>
     </footer>
